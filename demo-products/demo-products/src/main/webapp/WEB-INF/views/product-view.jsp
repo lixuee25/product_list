@@ -63,7 +63,7 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Data sẽ được điền qua AJAX -->
+            
         </tbody>
     </table>
 </div>

@@ -7,8 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
-
-    <!-- Thêm jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
@@ -63,23 +61,23 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Data sẽ được điền qua AJAX -->
+       
     </tbody>
 </table>
 
 <script>
-    // Hàm để lấy danh sách sản phẩm từ API và hiển thị vào bảng
+  
     function loadProducts() {
         $.ajax({
-            url: '/v1/api/getListProduct', // Địa chỉ API của bạn
+            url: '/v1/api/getListProduct',
             method: 'GET',
             dataType: 'json',
             success: function(response) {
-                var products = response.result; // Giả sử dữ liệu trả về là "result"
+                var products = response.result; 
                 var tableBody = $('#productTable tbody');
-                tableBody.empty(); // Xóa dữ liệu cũ trước khi hiển thị dữ liệu mới
+                tableBody.empty(); 
 
-                // Lặp qua sản phẩm và thêm vào bảng
+               
                 $.each(products, function(index, product) {
                     var row = $('<tr>');
                     row.append('<td>' + (index + 1) + '</td>');
